@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main class="screen">
+    <section class="hero card active" id="home">
+      <div class="cake" aria-hidden="true">
+        <span class="flame">🔥</span>
+        <span class="cake-top">🧁</span>
+      </div>
+      <p class="eyebrow">A SPECIAL DAY FOR YOU</p>
+      <h1>Selamat Ulang Tahun! 🎂</h1>
+      <p class="subtitle">selamat ulang tahun buat kamu, buka sesuai urutan yaaa </p>
+      <button class="primary-btn" id="openMenu">Buka kejutan <span>→</span></button>
+    </section>
+
+    <section class="menu card" id="menu">
+      <button class="back-btn" data-back="home">← Kembali</button>
+      <p class="eyebrow">PILIH KEJUTANMU</p>
+      <h2>Ada hadiah kecil nih<br>untuk kamu</h2>
+      <div class="choices">
+        <button class="choice" data-choice="love">
+          <span class="choice-icon">💌</span>
+          <span><strong>Pesan untuk Kamu</strong><small>Sebuah surat dari hatiku</small></span>
+          <b>→</b>
+        </button>
+        <button class="choice" data-choice="memories">
+          <span class="choice-icon">⚠️</span>
+          <span><strong>WARNING !!!!</strong><small>HATI HATI </small></span>
+          <b>→</b>
+        </button>
+        <button class="choice" data-choice="questions">
+          <span class="choice-icon">❓</span>
+          <span><strong>Pertanyaan Untuk Kamu</strong><small>Ada pertanyaan kecil</small></span>
+          <b>→</b>
+        </button>
+      </div>
+    </section>
+
+    <section class="content card" id="memories">
+      <button class="back-btn" data-back="menu">← Pilih lagi</button>
+      <p class="eyebrow">KENANGAN TERINDAH</p>
+      <h2>Yang Aku Punya Dari Kamu</h2>
+      <p class="subtitle">btw jangan bilang jelek padahal dia maniez tau.</p>
+      <div class="music-player">
+        <div class="music-info">
+          <span class="music-icon">♫</span>
+          <span><strong>Wish You Were Here</strong><small>Lagu diputar otomatis</small></span>
+        </div>
+        <audio id="birthdayMusic" loop preload="none" src="apaya/wish%20you%20were%20here.mp3"></audio>
+      </div>
+      <div class="gallery">
+      </div>
+      <p class="memory-note">Setiap momen bersamamu adalah hadiah yang paling berharga. ✨</p>
+    </section>
+
+    <section class="content card" id="love">
+      <button class="back-btn" data-back="menu">← Pilih lagi</button>
+      <p class="eyebrow">UNTUK KAMU</p>
+      <h2>Surat kecilku untukmu</h2>
+      <article class="letter">
+        <p>Sherly,</p>
+        <p>Hari ini adalah hari spesial untukmu.Terima kasih pernah hadir dan membuatku tersenyum setiap hari, walaupun kadang kamu nyebelin sih.tapi makasih banyak yaaaaa</p>
+        <p>Semoga semua impianmu semakin dekat, dan aku bisa terus melihat semua impianmu terwujud, semoga kamu panjang umur sehat selalu dan selalu membanggakan orang tua.Jangan lupa jaga kesehatanmu juga yaa,karena kalo sakit jadi nyusahin pa anto nanti,   hehehe.</p>
+        <p class="signature">I always miss you. 🤍</p>
+      </article>
+    </section>
+
+    <section class="content card" id="questions">
+      <button class="back-btn" data-back="menu">← Pilih lagi</button>
+      <p class="eyebrow">SEDIKIT PERTANYAAN</p>
+      <h2>Jawab dengan jujur yaa</h2>
+
+      <form class="question-form">
+        <fieldset>
+          <legend>Masih kangen aku gak?</legend>
+          <div class="answer-buttons">
+            <button type="button" class="answer-button" data-answer="aku">Kangen</button>
+            <button type="button" class="answer-button" data-answer="kamu">Enggak</button>
+          </div>
+        </fieldset>
+
+        <p class="question-result" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
